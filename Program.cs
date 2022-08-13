@@ -36,20 +36,36 @@
 Console.Clear();
 Console.WriteLine("Введите цифру, обозначающую день недели:  ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number > 0 && number < 6)
+if (number < 1 || number > 7)
 {
-    Console.WriteLine(" Будний день:(");
-}
-else if (number == 6 && number == 7)
-{
-    Console.WriteLine(" УРА!!! ВЫХОДНОЙ:) ");
-}
- 
-{
-    while (number<1 || number>7)
+    Console.WriteLine("Введите цифру, от 1 до 7 !");
+
+
+    while (number < 1 || number > 7)
     {
-        Console.WriteLine("Введите цифру, обозначающую день недели:  ");
-        break;
+        int number1 = Convert.ToInt32(Console.ReadLine());
+        if (number1 > 0 && number1 < 6)
+        {
+            Console.WriteLine(" Будний день:(");
+        return;
+        }
+        if (number1 == 6 || number1 == 7)
+        {
+            Console.WriteLine(" УРА!!! ВЫХОДНОЙ:) ");
+        return;
+        }
+         if   (number < 1 || number > 7)
+         {
+             Console.WriteLine("Введите цифру, от 1 до 7 !");
+         }
     }
-    
 }
+    if (number > 0 && number < 6)
+    {
+        Console.WriteLine(" Будний день:(");
+    }
+    if (number == 6 || number == 7)
+    {
+        Console.WriteLine(" УРА!!! ВЫХОДНОЙ:) ");
+    }
+
